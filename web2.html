@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trường THPT Hoài Đức A</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    color:#333;
+}
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav h2{
+    color:#0f4c81;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#0f4c81;
+}
+
+.hero{
+    height:70vh;
+    background:url("back2.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    margin-top:70px;
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.75);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#0f4c81;
+    margin-bottom:20px;
+}
+
+.hero a{
+    padding:12px 25px;
+    background:#0f4c81;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.hero a:hover{
+    background:#1e73be;
+}
+
+.intro{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.intro h2{
+    margin-bottom:20px;
+    color:#0f4c81;
+}
+
+.intro p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+#club{
+    padding:80px 10%;
+}
+
+#club h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#0f4c81;
+}
+
+.club-container{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+}
+
+@media(max-width:1000px){
+    .club-container{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .club-container{
+        grid-template-columns:1fr;
+    }
+}
+
+#club{
+    padding:80px 10%;
+}
+
+.club-card{
+    background:white;
+    padding:30px 20px;
+    border-radius:12px;
+    text-decoration:none;
+    color:#333;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    opacity:1 !important;
+    transform:none !important;
+}
+
+.club-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.club-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+.club-logo{
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.club-card:hover .club-logo{
+    transform:scale(1.05);
+}
+
+.club-card p{
+    font-weight:600;
+}
+
+footer{
+    background:#0f4c81;
+    color:white;
+    text-align:center;
+    padding:30px 10%;
+    margin-top:80px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Hoài Đức A</h2>
+    <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#club">Câu lạc bộ</a></li>
+        <li><a href="dang_ky.html">Đăng ký</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>TRƯỜNG TRUNG HỌC PHỔ THÔNG HOÀI ĐỨC A</h1>
+        <a href="#club">Khám phá câu lạc bộ</a>
+    </div>
+</section>
+
+<section class="intro">
+    <h2>Giới thiệu</h2>
+    <p>
+        Trường THPT Hoài Đức A là môi trường học tập năng động,
+        sáng tạo và giàu truyền thống. Các câu lạc bộ tại trường
+        là nơi học sinh phát triển kỹ năng, đam mê và tinh thần
+        làm việc nhóm.
+    </p>
+</section>
+
+<section id="club">
+<h2>Các Câu Lạc Bộ</h2>
+
+ <div class="club-container">
+
+<a href="clb1.html" class="club-card">
+        <img src="logo1.jpg" class="club-logo">
+    <p>CLB Bóng Đá</p>
+</a>
+
+<a href="clb2.html" class="club-card">
+        <img src="logo2.jpg" class="club-logo">
+<p>CLB Sách & Hành Động</p>
+</a>
+
+<a href="clb3.html" class="club-card">
+        <img src="logo3.jpg" class="club-logo">
+<p>Hoài Đức A Media</p>
+</a>
+
+<a href="clb4.html" class="club-card">
+        <img src="logo4.jpg" class="club-logo">
+  <p>HĐA Ecology</p>
+</a>
+
+<a href="clb5.html" class="club-card">
+        <img src="logo5.jpg" class="club-logo">
+  <p>Hoai Duc A Streetworkout</p>
+</a>
+
+<a href="clb6.html" class="club-card">
+        <img src="logo6.jpg" class="club-logo">
+  <p>E.O.P Dance Crew</p>
+</a>
+
+<a href="clb7.html" class="club-card">
+        <img src="logo7.jpg" class="club-logo">
+  <p>Hoai Duc A English Club</p>
+</a>
+
+<a href="clb8.html" class="club-card">
+        <img src="logo8.jpg" class="club-logo">
+  <p>HMC</p>
+</a>
+
+<a href="clb9.html" class="club-card">
+        <img src="logo9.jpg" class="club-logo">
+  <p>HDA Guitar Club - HGC</p>
+</a>
+
+<a href="clb10.html" class="club-card">
+        <img src="logo10.jpg" class="club-logo">
+  <p>HĐA The Journal</p>
+</a>
+
+<a href="clb11.html" class="club-card">
+        <img src="logo11.jpg" class="club-logo">
+  <p>HĐA Chinese Club</p>
+</a>
+
+<a href="clb12.html" class="club-card">
+        <img src="logo12.jpg" class="club-logo">
+  <p>HĐA Japanese Club</p>
+</a>
+
+<a href="clb13.html" class="club-card">
+        <img src="logo13.jpg" class="club-logo">
+  <p>Hoài Đức A Basketball</p>
+</a>
+</div>
+</section>
+
+<footer>
+    © 2026 Trường THPT Hoài Đức A | Page: thpthda.hanoi.edu.vn | Email: doantruonghdak60@gmail.com
+</footer>
+
+<script>
+const cards = document.querySelectorAll('.club-card');
+
+function revealCards(){
+    cards.forEach(card=>{
+        card.classList.add('show');
+    });
+}
+
+window.addEventListener('load', revealCards);
+</script>
+
+</body>
+</html>
